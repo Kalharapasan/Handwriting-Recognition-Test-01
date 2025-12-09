@@ -12,3 +12,6 @@ def preprocess_custom_image(image_path):
     img = Image.open(image_path).convert('L')
     img = img.resize((28, 28))
     img_array = np.array(img)
+    
+    if np.mean(img_array) > 127:
+        img_array = 255 - img_array
