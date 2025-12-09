@@ -35,4 +35,7 @@ def plot_prediction_comparison(model, x_test, y_test, num_samples=5):
         axes[1, i].bar(range(10), predictions[i])
         axes[1, i].set_title(f'Predicted: {predicted_labels[i]}')
         axes[1, i].set_xticks(range(10))
+    plt.tight_layout()
+    plt.show()
+    
     
