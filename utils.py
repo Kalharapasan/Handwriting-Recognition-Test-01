@@ -28,3 +28,8 @@ def plot_prediction_comparison(model, x_test, y_test, num_samples=5):
     
     fig, axes = plt.subplots(2, num_samples, figsize=(15, 6))
     
+    for i in range(num_samples):
+        axes[0, i].imshow(x_test[i].reshape(28, 28), cmap='gray')
+        axes[0, i].set_title(f'Actual: {actual_labels[i]}')
+        axes[0, i].axis('off')
+    
