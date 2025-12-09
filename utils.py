@@ -20,3 +20,6 @@ def preprocess_custom_image(image_path):
     img_array = img_array.reshape(1, 28, 28, 1)
     
     return img_array
+
+def plot_prediction_comparison(model, x_test, y_test, num_samples=5):
+    
