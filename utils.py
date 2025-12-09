@@ -32,4 +32,7 @@ def plot_prediction_comparison(model, x_test, y_test, num_samples=5):
         axes[0, i].imshow(x_test[i].reshape(28, 28), cmap='gray')
         axes[0, i].set_title(f'Actual: {actual_labels[i]}')
         axes[0, i].axis('off')
+        axes[1, i].bar(range(10), predictions[i])
+        axes[1, i].set_title(f'Predicted: {predicted_labels[i]}')
+        axes[1, i].set_xticks(range(10))
     
