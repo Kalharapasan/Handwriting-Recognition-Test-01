@@ -22,4 +22,9 @@ def preprocess_custom_image(image_path):
     return img_array
 
 def plot_prediction_comparison(model, x_test, y_test, num_samples=5):
+    predictions = model.predict(x_test[:num_samples])
+    predicted_labels = np.argmax(predictions, axis=1)
+    actual_labels = np.argmax(y_test[:num_samples], axis=1)
+    
+    fig, axes = plt.subplots(2, num_samples, figsize=(15, 6))
     
